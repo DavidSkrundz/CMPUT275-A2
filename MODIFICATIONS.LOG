@@ -3,3 +3,10 @@
 
 - Added PTBoat file/class
 - Added two PTBoats to island.lvl
+
+- Added a new folder called powerups
+- Added __init__.py to powerups
+- Added base_powerup.py
+- Added speed_powerup.py
+- Added loading code in gui.py to load powerups
+- Added code to draw powerups
