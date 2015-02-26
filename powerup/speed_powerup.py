@@ -13,4 +13,9 @@ class SpeedPowerup(BasePowerup):
 		#load the base class
 		super().__init__(**keywords)
 
+		self.info = "Boost Speed by 2"
+
+	def used(self, unit):
+		unit.speed += 2
+
 powerup.powerup_types["SpeedPowerup"] = SpeedPowerup

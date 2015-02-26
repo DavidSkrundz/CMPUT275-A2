@@ -714,7 +714,6 @@ class GUI(LayeredUpdates):
 		# draw powerups
 		for p in base_powerup.BasePowerup.active_powerups:
 			self.update_unit_rect(p)
-			print("here")
 		base_powerup.BasePowerup.active_powerups.draw(self.screen)
 
 		# If there's a selected unit, outline it
@@ -916,6 +915,23 @@ class GUI(LayeredUpdates):
 					self.draw_bar_text("Movement Cost: {}".format(cost),
 										line_num)
 					line_num += 1
+
+			#divider
+			self.draw_bar_div_line(line_num)
+			line_num += 1
+
+
+		# get the hovered powerup
+		hov_pow = powerup.base_powerup.BasePowerup.get_powerup_at_pos(coords)
+
+		if hov_pow:
+			#title
+			self.draw_bar_title("HOVERED POWERUP", line_num)
+			line_num += 1
+
+			#effect
+			self.draw_bar_text("Effect: {}".format(hov_pow.info), line_num)
+			line_num += 1
 
 			#divider
 			self.draw_bar_div_line(line_num)

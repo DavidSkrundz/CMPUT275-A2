@@ -35,5 +35,7 @@ PTBoat 0 25 20 90
 UNITS END
 
 POWERUPS START
-SpeedPowerup 0 0
+SpeedPowerup 26 20
+AttackPowerup 26 19
+HealthPowerup 26 21
 POWERUPS END

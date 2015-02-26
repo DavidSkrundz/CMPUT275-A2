@@ -1,5 +1,7 @@
 import pygame, unit, helper, bmpfont, effects
 from pygame.sprite import Sprite
+from powerup.base_powerup import BasePowerup
+
 
 FRAME_MOVE_SPEED = 3/20
 SIZE = 20
@@ -250,6 +252,11 @@ class BaseUnit(Sprite):
 			else:
 				#If we're at the next tile remove it
 				if (self.tile_x, self.tile_y) == self._path[0]:
+					# Get powerup
+					powerup = BasePowerup.get_powerup_at_pos(self._path[0])
+					if powerup != None:
+						powerup.consume(self)
+					#
 					self._path.pop(0)
 					if not self._path: return
 

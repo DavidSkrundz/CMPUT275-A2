@@ -30,7 +30,7 @@ class PTBoat(WaterUnit):
 		self.hit_sound = "ArtilleryFire"
 
 		#set unit specific things.
-		self.type = "Battleship"
+		self.type = "PT Boat"
 		self.speed = 12
 		self.max_atk_range = 6
 		self.damage = 4

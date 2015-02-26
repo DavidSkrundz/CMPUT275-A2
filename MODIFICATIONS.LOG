@@ -10,3 +10,7 @@
 - Added speed_powerup.py
 - Added loading code in gui.py to load powerups
 - Added code to draw powerups
+- Added code in base_unit to detect and pickup powerups
+- Added code in base_powerup to remove it when collected, and apply a bonus to the unit
+- Added health and attack powerups
+- Added text on the right sidebar that displays information about powerups when the mouse hovers over them

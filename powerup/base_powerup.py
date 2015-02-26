@@ -17,6 +17,8 @@ class BasePowerup(Sprite):
 	def __init__(self, tile_x = None, tile_y = None):
 		Sprite.__init__(self)
 
+		self.info = "POWERUP"
+
 		#Take the keywords off
 		self.tile_x = tile_x
 		self.tile_y = tile_y
@@ -26,6 +28,27 @@ class BasePowerup(Sprite):
 
 		self._update_image()
 		self.activate()
+
+	@staticmethod
+	def get_powerup_at_pos(pos):
+		"""
+		Returns the active unit at the given tile position, or None if no unit
+		is present.
+		"""
+		for u in BasePowerup.active_powerups:
+			if (u.tile_x, u.tile_y) == pos:
+				return u
+		return None
+
+	def consume(self, unit):
+		self.deactivate()
+		self.used(unit)
+
+	def used(self, unit):
+		"""
+		Override this in subclasses
+		"""
+		pass
 
 	def activate(self):
 		"""
@@ -60,5 +83,3 @@ class BasePowerup(Sprite):
 
 		# Rotate the sprite
 		self.image = pygame.transform.rotate(subsurf, 0)
-
-#powerup.powerup_types["Battleship"] = Battleship
