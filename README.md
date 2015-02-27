@@ -1,3 +1,10 @@
+# Cmput275A2
+Cmput 275 assignment two
+
+# David Skrundz - 1389031
+# Ryan Huard - 1410349
+
+
 tactics
 =======
 
@@ -15,50 +22,50 @@ To run the game, do
 
     python3 main.py <mapname>
 
-where _mapname_ is the name of one of the maps in the maps directory (minus 
+where _mapname_ is the name of one of the maps in the maps directory (minus
 the ".lvl" extension).
 
 Gameplay
 --------
 
-By default, there are two team: red and green. The goal of the game is 
+By default, there are two team: red and green. The goal of the game is
 destroy all of the other team's units.
 
 Click on a unit to select it. It will be highlighted in yellow.
 
-If you click on the **MOVE** button, all reachable tiles will glow blue. 
-Click on one of these tiles, and the selected unit will move to it. To 
-cancel movement, click again on either the **MOVE** button or your selected 
+If you click on the **MOVE** button, all reachable tiles will glow blue.
+Click on one of these tiles, and the selected unit will move to it. To
+cancel movement, click again on either the **MOVE** button or your selected
 unit.
 
-If you click on the **ATTACK** button, all tiles in range will glow red. As 
-well, any units which are available to attack will be marked with a blinking 
-targeting reticle. Click on any such unit and your selected unit will attack 
-it. To cancel your attack, click again on either the **ATTACK** button or 
+If you click on the **ATTACK** button, all tiles in range will glow red. As
+well, any units which are available to attack will be marked with a blinking
+targeting reticle. Click on any such unit and your selected unit will attack
+it. To cancel your attack, click again on either the **ATTACK** button or
 your selected unit.
 
-Each turn, you may move each of your units once and attack with each of your 
-units once. When you are done, press the **END TURN** button to let the 
-other team take its turn. In some cases, such as with air units, the unit 
-must be moved before you can end your turn. In this case, pressing the **END 
+Each turn, you may move each of your units once and attack with each of your
+units once. When you are done, press the **END TURN** button to let the
+other team take its turn. In some cases, such as with air units, the unit
+must be moved before you can end your turn. In this case, pressing the **END
 TURN** button will automatically select the unit if it has not yet been moved.
 
-Every unit type has different uses. See the documentation strings in the 
+Every unit type has different uses. See the documentation strings in the
 units directory for more information.
 
 The GUI
 -------
 
-On the bottom-right of each unit's tile, its health is displayed. When this 
-reaches 0, it will explode. For aircraft, a bar indicating its remaining 
-fuel is also displayed in the top-left of its tile. Similarly, when this 
+On the bottom-right of each unit's tile, its health is displayed. When this
+reaches 0, it will explode. For aircraft, a bar indicating its remaining
+fuel is also displayed in the top-left of its tile. Similarly, when this
 reaches 0, the unit will crash.
 
-The panel on the right side of the screen also displays useful information 
-about the selected unit, the unit your mouse is hovering over, and/or the 
+The panel on the right side of the screen also displays useful information
+about the selected unit, the unit your mouse is hovering over, and/or the
 tile your mouse is hovering over, depending on which are applicable.
 
-Note that all distances are measured in Manhattan distance using units of 
+Note that all distances are measured in Manhattan distance using units of
 tiles.
 
 The following stats are displayed for units:

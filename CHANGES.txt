@@ -1,5 +1,5 @@
-- Added Modification Log
-- Fixed an ID mismatch on Mac Systems
+- Created Modifications.Log
+- Fixed an ID mismatch on Mac Systems (lines 16-35 of tiles.py)
 
 - Added PTBoat file/class
 - Added two PTBoats to island.lvl
@@ -14,3 +14,7 @@
 - Added code in base_powerup to remove it when collected, and apply a bonus to the unit
 - Added health and attack powerups
 - Added text on the right sidebar that displays information about powerups when the mouse hovers over them
+
+- Renamed the Modification Log to CHANGES.txt
+- Wrote a new gather function that uses the value function
+- Updated README.md
