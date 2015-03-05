@@ -37,7 +37,7 @@ class PTBoat(WaterUnit):
 		self.defense = 1
 		self.hit_effect = effects.Explosion
 
-		self.health = 6
+		self.health = 12
 		self.max_health = self.health
 
 		self._update_image()
